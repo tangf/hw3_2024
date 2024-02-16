@@ -28,19 +28,14 @@ body{
   text-align: center;
 }
 
-h1{
+div h1{
   font-size: 50px;
   line-height: 1;
   padding: 50px 0;
   text-align: center;
 }
 
-div h1{
-  font-size: 50px;
-  padding: 50px 0;
-}
-
-h2{
+div h2{
   font-size: 32px;
   line-height: 1.5;
 }
@@ -149,14 +144,13 @@ nav a:focus, nav a:hover {
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
 .container > :first-child {
-  grid-column: span 3;
+  grid-column: 1/-1;
   background-image: url('../images/header.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
-  height: 400px;
 }
 
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
@@ -192,18 +186,15 @@ first div in the grid  and place it in the grid. */
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 .text-block {
-  align-items: center;
-  justify-content: center;
   text-align: center;
   margin: auto;
 }
-
 
 /* Add your media query here */
 
   /* Step 9: Write the selector/rule property to style the nav element */
   /* Step 10: Write the selector/rule property to update the .container class */
-  @media (min-width: 800px) {
+  @media only screen and (min-width: 800px) {
     
     .container {
       grid-template-columns: 50px auto 500px auto 50px;
@@ -214,7 +205,6 @@ first div in the grid  and place it in the grid. */
       padding: 40px 0;
       text-align: right;
     }
-   
 
     /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
     .about, .clients, .method-image, .contact-image {
@@ -227,7 +217,7 @@ first div in the grid  and place it in the grid. */
     /* Step 13:Write the selector/rule property to update the .text-block class */
     .text-block {
       max-height: 250px;
-      overflow: auto;
+      overflow: scroll;
     }
   } 
 
